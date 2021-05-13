@@ -1,6 +1,6 @@
 function setup(){
     createCanvas(800,600);   
-     let house = 
+    let house = 
     fill(235,198,33);
     square(400, 300, 150);
     fill(181,58,55);
