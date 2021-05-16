@@ -1,6 +1,6 @@
 function setup(){
     createCanvas(800,600);   
-    let house = 
+   
     fill(235,198,33);
     square(400, 300, 150);
     fill(181,58,55);
@@ -17,8 +17,9 @@ function setup(){
     rect(505, 350, 40, 60);
     fill(255,154,150);
     quad(545, 380, 525, 410, 506, 380, 525, 351);
-    ;
-    let tree = 
+    
+    
+  
     fill(173,134,93);
     rect(700, 300, 20, 150);
     fill(170, 134, 93);
@@ -29,7 +30,6 @@ function setup(){
     circle(656, 430, 10);
     fill(21, 161, 30);
     circle(710, 290, 80);
-    ;
 
     
 
