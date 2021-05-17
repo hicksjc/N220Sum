@@ -10,10 +10,9 @@ function draw(){
     background(255);
     x += speed; //increases the speed.
     fill(0,195,201);  
-    console.log(x);
     if (x > width+radius){ //if the position is greater than the canvas
         //move to the left edge
         x = -radius;
     }
-    arc(x, 60, radius, radius, 0, 7);
+    arc(x, 60, radius, radius, 0, 7); //The position and shape of the object, x tells the object to continuously update position x.
 }
