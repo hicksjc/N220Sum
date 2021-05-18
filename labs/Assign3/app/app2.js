@@ -3,7 +3,7 @@ function setup(){
     createCanvas(400,400);
 }
 function draw(){
-    background(100);
+    background(200);
     noFill();
 
     //for loop
