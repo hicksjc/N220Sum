@@ -4,12 +4,11 @@ function setup(){
     createCanvas(800,600);
 }
 function draw(){
-    background(200);
     fill(255,0,0);
 
     //for each row 
 
-    //for each row, insert the specified number
+    //for each row, insert the specified number row_num
     for (let row = 0; row <= row_num; row++){
 
         //for each column in the row. Increase the number of square by one.

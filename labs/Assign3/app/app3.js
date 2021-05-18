@@ -1,10 +1,7 @@
 //use loop to draw 25 black circles to the screen, oriented horizontally
 
 function setup(){
-    createCanvas(800,600);
-    
-
-    
+    createCanvas(800,600);    
 }
 function draw(){
     //use a loop to draw 25 black circles to the screen oriented horizontally.
