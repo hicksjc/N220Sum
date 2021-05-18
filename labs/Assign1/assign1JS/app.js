@@ -12,16 +12,28 @@ function setup(){
    
     //fill allows to color a shape in.
     fill(235,198,33);
+    //square is one of the shapes we can use in p5
+    //it can be used with X, Y, and Size.
     square(400, 300, 150);
     fill(181,58,55);
+    //Triangle is another shape 
+    //It is used with x1,y1,x2,y2,x3,y3.
     triangle(400, 300, 550, 300, 475, 200);
     fill(148, 16, 10);
+    //A rectangle is yet another shape 
+    //It is used with x, y, w, h.
     rect(405, 350, size2, 60);
     fill(255, 154, 150);
+    //Quad much like triangle can be used the same just with an extra x and y
+    //x1,y1,x2,y2,x3,y3,x4,y4
     quad(406, 380, 425, 410, 445, 380, 425, 351);
     fill(168,127,210);
+    //This rectangle uses round corners
+    //x, y, w, h, top-left, top-right,bottom-right, bottom-left
     rect(450, 380, 50, 70, 30, 30, 0, 0);
     fill(0, 0, 0);
+    //Circle is the most basic shape.
+    //x, y, radius
     circle(490, 420, 5)
     fill(148, 16, 10);
     rect(505, 350, size2, 60);
