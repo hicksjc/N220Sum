@@ -20,7 +20,7 @@ function draw(){
         //We are letting column start off as zero, when the column value is less than or equal to the number of rows it creates a square based on 
         //the amount of columns
             //insert a square 
-            //create one more square
+            //create one more square (x, y, size)
             square(column * 50, row * 50, 50);
         }
     }

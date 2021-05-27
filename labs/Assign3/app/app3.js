@@ -7,7 +7,7 @@ function draw(){
     //use a loop to draw 25 black circles to the screen oriented horizontally.
 
     //
-    for (let i=1; i<26; i++){
+    for (let i=1; i<25; i++){
         fill(0,0,0);
         circle(i*30, 150, 10);
         //if divisible by 3, draw a purple circle
