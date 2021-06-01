@@ -6,12 +6,14 @@ let myDog = {
     age: 11,
     color: "brown",
 };
-var counterIncrement= -1;
-var counter = setInterval(HungerLoss(), 1000);
 //variables for HTML stuff
 var DogName = document.getElementById("DogName");
 var DogHunger = document.getElementById("DogHunger");
 var DogHappy = document.getElementById("DogHappy");
+
+// var counterIncrement= -1;
+var counter = setInterval(HungerLoss, 5000);
+
 
 //writing stuff in HTML
 DogName.innerHTML = "Name: " + myDog.name;
@@ -25,22 +27,20 @@ DogHappy.innerHTML = "Happiness: " + myDog.happiness;
 //This function executes with the set interval function declared earlier
 function HungerLoss() {
 
-//Subtract by one as long as hunger is above 0
-do {
-    myDog.hunger - 1;
-} while (myDog.hunger != 0);
+    //Subtract by one as long as hunger is above 0
+    myDog.hunger = myDog.hunger - 1;
 
-if (myDog.hunger == 0){
-    alert("Your dog has died!!");
-}
+    if (myDog.hunger == 0) {
+        alert("Your dog has died!!");
+    }
 
-DogHunger.innerHTML = "Hunger: " + myDog.hunger;
-// console.log(myDog.hunger);
+    DogHunger.innerHTML = "Hunger: " + myDog.hunger;
+    console.log(myDog.hunger);
 }
 
 DogHunger.innerHTML = "Hunger: " + myDog.hunger;
 //Create a function that increases the value of hunger every time the button is clicked
-function feedSadie(){
+function feedSadie() {
     //Increase hunger by incriment of 5 when the function executes
     myDog.hunger = myDog.hunger + 5;
     //display the updated information.
@@ -48,9 +48,9 @@ function feedSadie(){
 
 }
 //Create a function that increases the value of happiness every time the button is clicked
-function playSadie(){
+function playSadie() {
     //Increase happiness by incriment of 5 when the function executes.
-    myDog.happiness = myDog.happiness + 5;DogHunger.innerHTML = "Hunger: " + (myDog.hunger - 1);
+    myDog.happiness = myDog.happiness + 5; DogHunger.innerHTML = "Hunger: " + (myDog.hunger - 1);
     //display the updated information.
     DogHappy.innerHTML = "Happiness: " + myDog.happiness;
 }
