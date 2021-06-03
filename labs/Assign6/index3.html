@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div{
+            float: left;
+        }
+        .player{
+            border: 1px solid #000;
+            border-radius: 5px;
+            margin: 2px;
+        }
+        .enemy{
+            float: left;
+            border: 1px solid red;
+            border-radius:  5px;
+            margin: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div id="player">
+        <h2>Player: </h2>
+        <h2 id="playerHP"></h2>
+        <h2 id="playerAttack"></h2>
+        <h2 id="playerDefense"></h2>
+    </div>
+    <button id="AttackButton" onclick="attackEnemy()">Attack</button>
+    <div id="enemy">
+        <h2>Enemy: </h2>
+        <h2 id="enemyHP"></h2>
+        <h2 id="enemyAttack"></h2>
+        <h2 id="enemyDefense"></h2>
+    </div>
+    
+    <script src="app/app3.js"></script>
+</body>
+</html>
