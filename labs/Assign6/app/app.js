@@ -60,9 +60,7 @@ DogHunger.innerHTML = "Hunger: " + myDog.hunger;
 //Create a function that increases the value of hunger every time the button is clicked
 function feedSadie() {
     //Increase hunger by incriment of 5 when the function executes
-    do {
         myDog.hunger = myDog.hunger + 5;
-    } while (myDog.hunger > 100);
 
     //error handling 
     if (myDog.hunger > 100) {
@@ -78,9 +76,7 @@ function feedSadie() {
 //Create a function that increases the value of happiness every time the button is clicked
 function playSadie() {
     //Increase happiness by incriment of 5 when the function executes.
-    do {
         myDog.happiness = myDog.happiness + 5;
-    } while (myDog.happiness > 100);
 
     if (myDog.happiness > 100) {
         alert("Your dog was too happy and died of a heart attack!");
