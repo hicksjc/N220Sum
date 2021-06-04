@@ -76,6 +76,7 @@ function feedSadie() {
 //Create a function that increases the value of happiness every time the button is clicked
 function playSadie() {
     //Increase happiness by incriment of 5 when the function executes.
+
         myDog.happiness = myDog.happiness + 5;
 
     if (myDog.happiness > 100) {
@@ -84,6 +85,7 @@ function playSadie() {
         clearInterval(counter);
         window.location.reload();
     }
+
     //display the updated information.
     DogHappy.innerHTML = "Happiness: " + myDog.happiness;
 }
