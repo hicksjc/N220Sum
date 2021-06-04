@@ -84,7 +84,6 @@ function playSadie() {
         clearInterval(counter);
         window.location.reload();
     }
-    DogHunger.innerHTML = "Hunger: " + (myDog.hunger - 1);
     //display the updated information.
     DogHappy.innerHTML = "Happiness: " + myDog.happiness;
 }
