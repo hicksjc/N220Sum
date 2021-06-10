@@ -9,6 +9,8 @@ var result = document.getElementById("result");
 
 document.getElementById("result")
 function submitGuess(){
+   //using .value like in the other applications were going to pull the user inputted information
+   //and compare it to the hard coded value that we have above.
  if (guesses.value == number){
     result.innerHTML = "You've Guessed the Right Answer.";
  } else if (guesses.value > number){
