@@ -1,19 +1,19 @@
-//create variables for each div 
-var square1 = document.getElementById("div1");
-var square2 = document.getElementById("div2");
-var square3 = document.getElementById("div3");
-
-function changeStyle(e1, e2, e3) {
- var e1 = (square1.style.backgroundColor = "blue") && (square1.style.width = "20px");
- var e2 = (square2.style.backgroundColor = "blue") && (square2.style.width = "20px");
- var e3 = (square3.style.backgroundColor = "blue") && (square3.style.with = "20px");
+//Create a function with an input e1 will serve as a variable within this.
+function changeStyle(e1) {
+    //create a variable with a document element of e1, this allows us to manipulate multiple individually with each call.
+var el = document.getElementById(e1);
+//style the variables
+el.style.backgroundColor = "blue";
+el.style.width = "20px";
 }
+//Create three funcitons that serve as onclick functions
 function changeDiv1(){
-    changeStyle('e1');
+    //by putting "div1" in the changeStyle() we are assigning the id of div1 to the variable of e1 then using it in the document.getElementById
+    changeStyle("div1");
 }
 function changeDiv2(){
-    changeStyle('e2');
+    changeStyle("div2");
 }
 function changeDiv3(){
-    changeStyle('e3');
+    changeStyle('div3');
 }
