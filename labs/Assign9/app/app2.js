@@ -1,19 +1,26 @@
+//Create variables for the div and button.
 var input = document.getElementById("words");
 var foundIt = document.getElementById("foundBadWord");
+//Create an array of bad words.
 let badWords = ["clear", "water", "tires"];
 
+//Fixed an issue where the total count for bad words found didn't increase.
+//The problem was I assigned total=0 inside the button function which reset it back to 0 each time
+var total = 0;
 function findBadWord(){
 
+    //set a value for the user input
     let lookingFor = input.value;
 
-    let total = 0;
+    //Create a for loop that's the length of the array of badwords.
     for(var i=0; i < badWords.length; i++){
+        //If a bad word is found through user input...
         if(badWords[i] == lookingFor){ 
+            //increase the total by one
             total++;
-            var newTotal = total;
-            foundIt.innerHTML = "That's a Bad Word, you've found " + newTotal + " Bad Words.";
+            //display a message that increases by the total amount of times a bad word is found.
+            foundIt.innerHTML = "That's a Bad Word, you've found " + total + " Bad Words.";
         } 
         
     }
-    console.log(total);
 }
