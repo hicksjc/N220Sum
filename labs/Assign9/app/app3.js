@@ -9,8 +9,10 @@ let objects = [
     { color: "#ff0000", height: 300, width: 100 }
 ];
 
+//create a function that displays the divs
 function display() {
-    console.log(objects[0].color);
+    //Create a for loop that allows to display each div.
+    //reference the assignment where you created an element.
     for(var i=0; i < objects.length; i++){
         //create new div.
         let newEl = document.createElement("div");
