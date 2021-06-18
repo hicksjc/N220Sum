@@ -2,13 +2,6 @@
 
 var elements = document.getElementsByClassName("cell");
 
-var winningConditions = [
-    [elements[0],elements[1],elements[2]],
-    [elements[3],elements[4],elements[5]],
-    [elements[6],elements[7],elements[8]],
-    [elements[0],elements[4],elements[8]],
-    [elements[2],elements[4],elements[6]]
-]
 //each element should change between two colors depending on the turn of the player.
 let turn = 1;
 //For this turn=1 will be red and turn=2 will be blue.
@@ -22,24 +15,52 @@ function playTurn(event) {
     //this function should recognize whos turn it is and change the square based on the color.
 
     if (turn == 1) {
-        turn++;
+
         this.style.backgroundColor = "#71a455";
         console.log(this);
+        //if the win conditions of tic tac toe equal the same color and the turn is still equal to one display a you win.
+        if (turn == 1 && ((elements[0].style.backgroundColor && elements[1].style.backgroundColor && elements[2].style.backgroundColor) ||
+            (elements[3].style.backgroundColor && elements[4].style.backgroundColor && elements[5].style.backgroundColor) ||
+            (elements[6].style.backgroundColor && elements[7].style.backgroundColor && elements[8].style.backgroundColor) ||
+            (elements[0].style.backgroundColor && elements[3].style.backgroundColor && elements[6].style.backgroundColor) ||
+            (elements[1].style.backgroundColor && elements[4].style.backgroundColor && elements[7].style.backgroundColor) ||
+            (elements[2].style.backgroundColor && elements[5].style.backgroundColor && elements[8].style.backgroundColor) ||
+            (elements[0].style.backgroundColor && elements[4].style.backgroundColor && elements[8].style.backgroundColor) ||
+            (elements[2].style.backgroundColor && elements[4].style.backgroundColor && elements[6].style.backgroundColor))
+            == "#71a455") {
+            console.log("you win");
+        }
+        turn++;
     } else {
+        if (turn == 2 && ((elements[0].style.backgroundColor && elements[1].style.backgroundColor && elements[2].style.backgroundColor) ||
+            (elements[3].style.backgroundColor && elements[4].style.backgroundColor && elements[5].style.backgroundColor) ||
+            (elements[6].style.backgroundColor && elements[7].style.backgroundColor && elements[8].style.backgroundColor) ||
+            (elements[0].style.backgroundColor && elements[3].style.backgroundColor && elements[6].style.backgroundColor) ||
+            (elements[1].style.backgroundColor && elements[4].style.backgroundColor && elements[7].style.backgroundColor) ||
+            (elements[2].style.backgroundColor && elements[5].style.backgroundColor && elements[8].style.backgroundColor) ||
+            (elements[0].style.backgroundColor && elements[4].style.backgroundColor && elements[8].style.backgroundColor) ||
+            (elements[2].style.backgroundColor && elements[4].style.backgroundColor && elements[6].style.backgroundColor))
+            == "#97bcce") {
+            console.log("you win");
+        }
         turn--;
         this.style.backgroundColor = "#97bcce";
         //console.log(this.style.backgroundColor);
     }
     this.removeEventListener("click", playTurn);
     //if a cell already has its background color changed, clicking it won't do anything else.
-    console.log(i);
+    // console.log(i);
     //I want this to be when a specific color matches in three boxes (winningConditions) it tells the player that they've one
     //|| elements[3 && 4 && 5].style.backgroundColor || elements[6 && 7 && 8].style.backgroundColor || element[0 && 4 && 8].style.backgroundColor || elements[2 && 4 && 6].style.backgroundColor
-    if (winningConditions[0].style.backgroundColor === "rgb(113, 164, 85)") {
-        console.log("Deactivating");
-        alert("you win!");
+    // if (winningConditions[0].style.backgroundColor === "rgb(113, 164, 85)") {
+    //     console.log("Deactivating");
+    //     alert("you win!");
 
-    } //else if ((elements[i].style.backgroundColor == "rgb(151, 188, 206)") == winningConditions){
+    // } 
+
+
+
+    //else if ((elements[i].style.backgroundColor == "rgb(151, 188, 206)") == winningConditions){
     //     console.log("Deactivating");
 
     // }
