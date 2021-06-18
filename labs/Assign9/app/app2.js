@@ -22,7 +22,7 @@ function findBadWord() {
             //If a bad word is found through user input...
             if (wordsplit[i] == badWords[x]) {
                 //increase the total by one
-                total++;
+                total++; 
                 //display a message that increases by the total amount of times a bad word is found.
                 foundIt.innerHTML = "That's a Bad Word, you've found " + total + " Bad Words.";
             }
