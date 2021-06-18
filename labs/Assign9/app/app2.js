@@ -17,7 +17,7 @@ function findBadWord(){
 
     //Create a for loop that's the length of the array of badwords.
     for(var i=0; i < wordsplit.length; i++){
-        for(let x=0;x<badWords.length; x++){
+        for(let x=0;x<badWords.length; x++){ 
         //If a bad word is found through user input...
         if(wordsplit[i] == badWords[x]){ 
             //increase the total by one
