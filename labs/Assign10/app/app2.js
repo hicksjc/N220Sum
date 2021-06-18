@@ -68,7 +68,7 @@ function increaseColor9(event){
 
 //This changes the color of the div.
 function colorChange(){
-    //Write the current color in a div
+    //Write the current color in a div with the rgb value
     document.getElementById('currentColor').textContent = "Current Color: rgb(" + red + "," + green + "," + blue + ")";
     //change the color of the div based on the values determined earlier, as the user presses the buttons these values change and this should update each time if done correctly.
     Display.style.backgroundColor = "rgb(" + red + "," + green + "," + blue + ")";

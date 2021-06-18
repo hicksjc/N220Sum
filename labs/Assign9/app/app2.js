@@ -12,15 +12,20 @@ function findBadWord(){
     //set a value for the user input
     let lookingFor = input.value;
 
+    let wordsplit = lookingFor.split(" ");
+    
+
     //Create a for loop that's the length of the array of badwords.
-    for(var i=0; i < badWords.length; i++){
+    for(var i=0; i < wordsplit.length; i++){
+        for(let x=0;x<badWords.length; x++){
         //If a bad word is found through user input...
-        if(badWords[i] == lookingFor){ 
+        if(wordsplit[i] == badWords[x]){ 
             //increase the total by one
             total++;
             //display a message that increases by the total amount of times a bad word is found.
             foundIt.innerHTML = "That's a Bad Word, you've found " + total + " Bad Words.";
         } 
-        
+    }
+          
     }
 }
