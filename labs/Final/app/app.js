@@ -60,11 +60,12 @@ function playTurn() {
 
         //console.log(this.style.backgroundColor);
     }
+    //if a cell already has its background color changed, clicking it won't do anything else.
     this.removeEventListener("click", playTurn);
 
     //checkWinners(this.style.backgroundColor);
 
-    //if a cell already has its background color changed, clicking it won't do anything else.
+    
     // console.log(i);
     //I want this to be when a specific color matches in three boxes (winningConditions) it tells the player that they've one
     //|| elements[3 && 4 && 5].style.backgroundColor || elements[6 && 7 && 8].style.backgroundColor || element[0 && 4 && 8].style.backgroundColor || elements[2 && 4 && 6].style.backgroundColor
@@ -97,6 +98,7 @@ function playTurn() {
 function reset(){
     location.reload();
 }
+
 // function checkWinners(marksArray){
 
 //     //for loop to get the first array from winning conditions.
