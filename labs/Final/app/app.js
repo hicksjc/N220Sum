@@ -2,6 +2,7 @@
 
 var elements = document.getElementsByClassName("cell");
 
+var winner = document.getElementById("winner");
 //each element should change between two colors depending on the turn of the player.
 let turn = 1;
 //For this turn=1 will be red and turn=2 will be blue.
@@ -21,47 +22,48 @@ for (var i = 0; i < elements.length; i++) {
     elements[i].addEventListener("click", playTurn);
 }
 //Create a function that allows a player to play a turn.
-function playTurn(event) {
+function playTurn() {
     //this function should recognize whos turn it is and change the square based on the color.
 
     if (turn == 1) {
 
         this.style.backgroundColor = "#71a455";
-        console.log(this);
+        //console.log(this);
         //if the win conditions of tic tac toe equal the same color and the turn is still equal to one display a you win.
-        if (((elements[0].style.backgroundColor && elements[1].style.backgroundColor && elements[2].style.backgroundColor) ||
-            (elements[3].style.backgroundColor && elements[4].style.backgroundColor && elements[5].style.backgroundColor) ||
-            (elements[6].style.backgroundColor && elements[7].style.backgroundColor && elements[8].style.backgroundColor) ||
-            (elements[0].style.backgroundColor && elements[3].style.backgroundColor && elements[6].style.backgroundColor) ||
-            (elements[1].style.backgroundColor && elements[4].style.backgroundColor && elements[7].style.backgroundColor) ||
-            (elements[2].style.backgroundColor && elements[5].style.backgroundColor && elements[8].style.backgroundColor) ||
-            (elements[0].style.backgroundColor && elements[4].style.backgroundColor && elements[8].style.backgroundColor) ||
-            (elements[2].style.backgroundColor && elements[4].style.backgroundColor && elements[6].style.backgroundColor))
-            == "rgb(113, 164, 85)") {
-            console.log("you win");
+        if ((elements[0].style.backgroundColor == "rgb(113, 164, 85)" && elements[1].style.backgroundColor == "rgb(113, 164, 85)" && elements[2].style.backgroundColor == "rgb(113, 164, 85)") ||
+            (elements[3].style.backgroundColor == "rgb(113, 164, 85)" && elements[4].style.backgroundColor == "rgb(113, 164, 85)" && elements[5].style.backgroundColor == "rgb(113, 164, 85)") ||
+            (elements[6].style.backgroundColor == "rgb(113, 164, 85)" && elements[7].style.backgroundColor == "rgb(113, 164, 85)" && elements[8].style.backgroundColor == "rgb(113, 164, 85)") ||
+            (elements[0].style.backgroundColor == "rgb(113, 164, 85)" && elements[3].style.backgroundColor == "rgb(113, 164, 85)" && elements[6].style.backgroundColor == "rgb(113, 164, 85)") ||
+            (elements[1].style.backgroundColor == "rgb(113, 164, 85)" && elements[4].style.backgroundColor == "rgb(113, 164, 85)" && elements[7].style.backgroundColor == "rgb(113, 164, 85)") ||
+            (elements[2].style.backgroundColor == "rgb(113, 164, 85)" && elements[5].style.backgroundColor == "rgb(113, 164, 85)" && elements[8].style.backgroundColor == "rgb(113, 164, 85)") ||
+            (elements[0].style.backgroundColor == "rgb(113, 164, 85)" && elements[4].style.backgroundColor == "rgb(113, 164, 85)" && elements[8].style.backgroundColor == "rgb(113, 164, 85)") ||
+            (elements[2].style.backgroundColor == "rgb(113, 164, 85)" && elements[4].style.backgroundColor == "rgb(113, 164, 85)" && elements[6].style.backgroundColor == "rgb(113, 164, 85)")
+        ) {
+            winner.innerHTML = "You Win!";
         }
+
         turn++;
     } else if (turn == 2) {
         this.style.backgroundColor = "#97bcce";
-        if (((elements[0].style.backgroundColor && elements[1].style.backgroundColor && elements[2].style.backgroundColor) ||
-            (elements[3].style.backgroundColor && elements[4].style.backgroundColor && elements[5].style.backgroundColor) ||
-            (elements[6].style.backgroundColor && elements[7].style.backgroundColor && elements[8].style.backgroundColor) ||
-            (elements[0].style.backgroundColor && elements[3].style.backgroundColor && elements[6].style.backgroundColor) ||
-            (elements[1].style.backgroundColor && elements[4].style.backgroundColor && elements[7].style.backgroundColor) ||
-            (elements[2].style.backgroundColor && elements[5].style.backgroundColor && elements[8].style.backgroundColor) ||
-            (elements[0].style.backgroundColor && elements[4].style.backgroundColor && elements[8].style.backgroundColor) ||
-            (elements[2].style.backgroundColor && elements[4].style.backgroundColor && elements[6].style.backgroundColor))
-            == "rgb(151, 188, 206)") {
-            console.log("you win");
+        if ((elements[0].style.backgroundColor == "rgb(151, 188, 206)" && elements[1].style.backgroundColor == "rgb(151, 188, 206)" && elements[2].style.backgroundColor == "rgb(151, 188, 206)") ||
+            (elements[3].style.backgroundColor == "rgb(151, 188, 206)" && elements[4].style.backgroundColor == "rgb(151, 188, 206)" && elements[5].style.backgroundColor == "rgb(151, 188, 206)") ||
+            (elements[6].style.backgroundColor == "rgb(151, 188, 206)" && elements[7].style.backgroundColor == "rgb(151, 188, 206)" && elements[8].style.backgroundColor == "rgb(151, 188, 206)") ||
+            (elements[0].style.backgroundColor == "rgb(151, 188, 206)" && elements[3].style.backgroundColor == "rgb(151, 188, 206)" && elements[6].style.backgroundColor == "rgb(151, 188, 206)") ||
+            (elements[1].style.backgroundColor == "rgb(151, 188, 206)" && elements[4].style.backgroundColor == "rgb(151, 188, 206)" && elements[7].style.backgroundColor == "rgb(151, 188, 206)") ||
+            (elements[2].style.backgroundColor == "rgb(151, 188, 206)" && elements[5].style.backgroundColor == "rgb(151, 188, 206)" && elements[8].style.backgroundColor == "rgb(151, 188, 206)") ||
+            (elements[0].style.backgroundColor == "rgb(151, 188, 206)" && elements[4].style.backgroundColor == "rgb(151, 188, 206)" && elements[8].style.backgroundColor == "rgb(151, 188, 206)") ||
+            (elements[2].style.backgroundColor == "rgb(151, 188, 206)" && elements[4].style.backgroundColor == "rgb(151, 188, 206)" && elements[6].style.backgroundColor == "rgb(151, 188, 206)")
+        ) {
+            winner.innerHTML = "You Win!";
         }
         turn--;
-        
+
         //console.log(this.style.backgroundColor);
     }
     this.removeEventListener("click", playTurn);
 
     //checkWinners(this.style.backgroundColor);
-    
+
     //if a cell already has its background color changed, clicking it won't do anything else.
     // console.log(i);
     //I want this to be when a specific color matches in three boxes (winningConditions) it tells the player that they've one
@@ -91,6 +93,9 @@ function playTurn(event) {
     // if (elements[i].style.backgroundColor = "#71a455"){
     //     elements[i].removeEventListener("click", playTurn);
     // }
+}
+function reset(){
+    location.reload();
 }
 // function checkWinners(marksArray){
 
